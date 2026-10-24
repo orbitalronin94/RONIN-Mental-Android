@@ -931,7 +931,7 @@ body::before{opacity:.12}#header{background:rgba(11,16,32,.94);border-bottom-col
 .score-box{padding:20px;border-radius:12px}.score-big{font-size:clamp(38px,5vw,52px)}.interp-panel{padding:16px;border-radius:12px}.interp-hdr{font-size:12px}.ipt{font-size:13px;padding-top:5px;padding-bottom:5px}
 .study-link{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:18px;padding-top:13px;border-top:1px solid rgba(145,163,191,.18);font-size:11px}.study-link>span{font-size:9px;font-weight:800;letter-spacing:.09em;color:var(--text-muted)}.study-link a{color:#bcb2ff;text-decoration:none;font-weight:650;overflow-wrap:anywhere}.study-link a:hover{text-decoration:underline;color:#fff}
 input,textarea,select{font:inherit}button,a,input,label{touch-action:manipulation}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #bcb2ff;outline-offset:3px}
-#ronin-language-notice{font-size:13px!important;line-height:1.5!important;padding:12px 16px!important;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+#lang-btn{display:none!important}#ronin-language-notice{font-size:13px!important;line-height:1.5!important;padding:12px 16px!important;box-shadow:0 4px 20px rgba(0,0,0,.2)}
 @media(max-width:650px){.hdr{flex-wrap:wrap;gap:8px}.status-dots{margin-left:auto}#session-clock{display:none}.hdr-btn{font-size:11px;padding:7px 9px}.tab-nav{margin-left:-2px;margin-right:-2px;gap:2px}.tab-btn{padding:10px 11px;font-size:11px}.card{padding:16px;border-radius:13px}.rg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.ro{min-width:0}.ro label{min-height:44px}.btn-row{display:grid;grid-template-columns:1fr 1fr}.btn-row .btn{justify-content:center;padding:10px 8px}.study-link{align-items:flex-start;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
@@ -1335,6 +1335,7 @@ input,textarea,select{font:inherit}button,a,input,label{touch-action:manipulatio
         </tbody>
       </table>
       <div style="margin-top:9px;font-size:8.5px;color:var(--text-muted);">Ref: Posner K, et al. Am J Psychiatry. 2011;168(12):1266-1277. | Columbia Lighthouse Project 2025.</div>
+      <div class="study-link"><span>FUENTE CIENTÍFICA</span><a href="https://doi.org/10.1176/appi.ajp.2011.10111704" target="_blank" rel="noopener noreferrer">Posner et al. (2011) · validación inicial de la C-SSRS · DOI ↗</a></div>
     </div>
   </div><!-- /tab-cssrs -->
 
