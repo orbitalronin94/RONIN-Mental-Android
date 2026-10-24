@@ -3719,71 +3719,6 @@ h2{color:#3a2a6a;margin-top:22px;font-size:13px;border-bottom:1px solid #ddd;pad
 Refs: PHQ-9 (Kroenke 2001) · GAD-7 (Spitzer 2006) · MDQ (Hirschfeld 2000) · Y-BOCS (Goodman 1989) · ASRS (Kessler 2005) · AUDIT (Saunders 1993) · C-SSRS (Posner 2011) · NICE NG222 (2022)
 <br>PSYCHIATRIC-SCANNER Ω · RONIN MENTAL v2.0 | Prompt engineering: David Ferrandez Canalis
 </div>
-
-<script>
-/* RONIN Mental bilingual UI layer. Original clinical content remains attributed to its author. */
-(function(){
- const dict = {
- "PSYCHIATRIC-SCANNER":"PSYCHIATRIC SCANNER",
- "CRIBADO":"SCREENING","FARMACO":"PHARMACOLOGY","EVIDENCIA":"EVIDENCE",
- "GLOSARIO":"GLOSSARY","RESUMEN":"SUMMARY","NOTAS":"NOTES",
- "INTERSECCIONES":"INTERSECTIONS","Evaluación":"Assessment","Evaluacion":"Assessment",
- "Guardar":"Save","Cancelar":"Cancel","Cerrar":"Close","Exportar":"Export",
- "Importar":"Import","Descargar":"Download","Buscar":"Search","Volver":"Back",
- "Continuar":"Continue","Limpiar":"Clear","Eliminar":"Delete","Añadir":"Add",
- "Añadir nota":"Add note","Nueva sesión":"New session","Nueva sesion":"New session",
- "Historial":"History","Configuración":"Settings","Configuracion":"Settings",
- "Riesgo suicida":"Suicide risk","Factores protectores":"Protective factors",
- "Plan de intervención":"Intervention plan","Plan de intervencion":"Intervention plan",
- "Criterios diagnósticos":"Diagnostic criteria","Criterios diagnosticos":"Diagnostic criteria",
- "Diagnóstico diferencial":"Differential diagnosis","Diagnostico diferencial":"Differential diagnosis",
- "Dosis":"Dosage","Calculadora de dosis":"Dose calculator","Referencias":"References",
- "Glosario clínico":"Clinical glossary","Glosario clinico":"Clinical glossary",
- "Notas clínicas":"Clinical notes","Notas clinicas":"Clinical notes",
- "Resumen global":"Overall summary","No es una herramienta de diagnóstico":"This is not a diagnostic tool",
- "No es una herramienta de diagnostico":"This is not a diagnostic tool",
- "Uso educativo y apoyo clínico profesional":"Educational use and professional clinical support",
- "Uso educativo y apoyo clinico profesional":"Educational use and professional clinical support",
- "Idioma":"Language","Español":"Spanish","Inglés":"English","Ingles":"English",
- "Selecciona":"Select","Paciente":"Patient","Fecha":"Date","Edad":"Age",
- "Resultado":"Result","Puntuación":"Score","Puntuacion":"Score","Interpretación":"Interpretation",
- "Interpretacion":"Interpretation","Síntomas":"Symptoms","Sintomas":"Symptoms",
- "Frecuencia":"Frequency","Nunca":"Never","A veces":"Sometimes","A menudo":"Often",
- "Casi siempre":"Almost always","Sí":"Yes","No":"No","Ninguno":"None",
- "Leve":"Mild","Moderado":"Moderate","Grave":"Severe","Alto":"High","Bajo":"Low",
- "Advertencia":"Warning","Información":"Information","Informacion":"Information",
- "Fuente":"Source","Actualizado":"Updated","Semana":"Week","Semanas":"Weeks",
- "Mes":"Month","Meses":"Months","Día":"Day","Días":"Days","Dias":"Days"
- };
- const reverse = Object.fromEntries(Object.entries(dict).map(([es,en])=>[en,es]));
- let lang = localStorage.getItem('roninMentalLang') || 'es';
- const original = new WeakMap();
- function translateNode(node, to){
-   if(node.nodeType===3){
-     if(!original.has(node)) original.set(node,node.nodeValue);
-     const base=original.get(node);
-     if(to==='es'){node.nodeValue=base;return;}
-     let s=base;
-     Object.keys(dict).sort((a,b)=>b.length-a.length).forEach(k=>{s=s.split(k).join(dict[k]);});
-     node.nodeValue=s;
-   } else if(node.nodeType===1 && !['SCRIPT','STYLE','NOSCRIPT','TEXTAREA'].includes(node.tagName)){
-     ['placeholder','title','aria-label'].forEach(a=>{
-       const key='data-ronin-original-'+a;
-       if(!node.hasAttribute(key)) node.setAttribute(key,node.getAttribute(a)||'');
-       const base=node.getAttribute(key);
-       if(base){let s=base;if(to==='en') Object.keys(dict).sort((a,b)=>b.length-a.length).forEach(k=>s=s.split(k).join(dict[k]));node.setAttribute(a,s);}
-     });
-     Array.from(node.childNodes).forEach(n=>translateNode(n,to));
-   }
- }
- function apply(){translateNode(document.body,lang);document.documentElement.lang=lang;const b=document.getElementById('ronin-lang-toggle');if(b)b.textContent=lang==='es'?'ES  |  EN':'EN  |  ES';}
- const bar=document.createElement('div');bar.id='ronin-lang-bar';bar.innerHTML='<span>RONIN MENTAL</span><button id="ronin-lang-toggle" type="button" aria-label="Switch language">ES | EN</button>';
- Object.assign(bar.style,{position:'sticky',top:'0',zIndex:'99999',display:'flex',justifyContent:'space-between',alignItems:'center',padding:'8px 14px',background:'#111827',color:'#fff',font:'600 12px system-ui',letterSpacing:'1px',boxShadow:'0 2px 8px #0003'});
- const style=document.createElement('style');style.textContent='#ronin-lang-toggle{border:1px solid #9ca3af;border-radius:18px;background:#fff;color:#111827;padding:6px 12px;font-weight:700;cursor:pointer}';
- document.head.appendChild(style);
- document.addEventListener('DOMContentLoaded',function(){document.body.prepend(bar);document.getElementById('ronin-lang-toggle').addEventListener('click',function(){lang=lang==='es'?'en':'es';localStorage.setItem('roninMentalLang',lang);apply();});apply();});
-})();
-</script>
 </body></html>`;
 
     const blob = new Blob([html], {type:'text/html'});
@@ -4033,5 +3968,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+
+<style>#ronin-language-notice{position:sticky;top:0;z-index:99999;background:#fff3cd;color:#392f12;border-bottom:1px solid #d9c47a;padding:10px 14px;font:14px/1.45 system-ui,sans-serif;display:flex;gap:12px;align-items:flex-start;justify-content:space-between}#ronin-language-notice button{border:1px solid #8c7b45;background:transparent;border-radius:6px;padding:3px 8px;color:inherit;flex-shrink:0}</style><div id="ronin-language-notice" role="note" aria-label="Aviso sobre idioma y uso clínico"><div><strong>Aplicación solo en castellano.</strong> Las escalas y el contenido clínico no constituyen por sí solos un diagnóstico. Utilice la herramienta como apoyo y consulte a profesionales cualificados. En caso de peligro inmediato o riesgo de suicidio, contacte con los servicios de emergencia locales.</div><button type="button" aria-label="Cerrar aviso" onclick="document.getElementById('ronin-language-notice').remove()">Cerrar</button></div>
 </body>
 </html>
