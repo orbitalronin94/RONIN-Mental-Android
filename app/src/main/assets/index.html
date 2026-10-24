@@ -912,6 +912,29 @@ footer{
   .tab-btn{padding:5px 6px;font-size:7.5px}
 }
 </style>
+<style id="ronin-frontend-refresh">
+:root{--bg:#0b1020;--bg2:#10182b;--bg3:#15213a;--panel:#121d31;--panel2:#182640;--panel3:#20314e;--border:#2b3c58;--border-hi:#526987;--lav:#9b8cff;--mint:#68e0b2;--coral:#ff7d9c;--gold:#ffd166;--blue:#70c8ff;--teal:#5ce1d2;--text:#edf3ff;--text-dim:#bdcbe0;--text-muted:#91a3bf;--text-faint:#647895;--r-sm:8px;--r-md:14px;--r-lg:18px}
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px;line-height:1.6;background:radial-gradient(ellipse at 10% 0%,rgba(88,105,190,.15),transparent 42%),var(--bg);color:var(--text)}
+body::before{opacity:.12}#header{background:rgba(11,16,32,.94);border-bottom-color:rgba(145,163,191,.2)}
+.hdr{min-height:66px;height:auto;padding:10px clamp(14px,3vw,28px);gap:14px}.logo-icon{width:40px;height:40px;border-radius:12px}.logo-title{font-size:16px;letter-spacing:.03em}.logo-sub{font-size:10px}
+#disclaimer{padding:12px clamp(14px,3vw,28px);background:rgba(255,125,156,.07)}.disc-text{font-size:12px}.disc-icon{font-size:18px}
+#progress-bar-wrap{padding:12px clamp(14px,3vw,28px);background:rgba(18,29,49,.85)}.pb-label{font-size:11px}.pb-mod{height:7px;border-radius:6px}
+#app{max-width:1280px;padding:clamp(14px,3vw,30px) clamp(12px,3vw,28px) 72px}
+.tab-nav{gap:6px;margin-bottom:26px;border-bottom-color:rgba(145,163,191,.22);padding-bottom:2px}.tab-btn{font-family:inherit;font-size:12px;font-weight:650;letter-spacing:0;padding:12px 15px;border-radius:10px 10px 0 0}.tab-btn.active{background:rgba(155,140,255,.1)}
+.sec-hdr{align-items:center;margin-bottom:20px}.sec-badge{font-size:10px;border-radius:999px;padding:5px 11px}.sec-title{font-size:clamp(21px,3vw,28px);letter-spacing:-.025em}.sec-desc{font-size:12px;color:var(--text-muted)}
+.card{padding:clamp(16px,2.5vw,24px);border-radius:16px;background:linear-gradient(145deg,rgba(24,38,64,.96),rgba(18,29,49,.98));border-color:rgba(145,163,191,.22);box-shadow:0 12px 32px rgba(0,0,0,.12);overflow:visible}.card::before{height:2px;opacity:.8}
+.g2,.g3,.gauto{gap:18px}.ctitle{font-size:clamp(14px,1.6vw,17px);letter-spacing:.01em;text-transform:none;line-height:1.35;margin-bottom:7px}.csub{font-size:12px;color:var(--text-muted);margin-bottom:18px;letter-spacing:0}
+.qitem{padding:14px 0;border-bottom-color:rgba(145,163,191,.15)}.qtext{font-size:14px;line-height:1.55;margin-bottom:12px}.qnum{font-size:12px;color:var(--lav)}
+.rg{gap:7px}.ro{min-width:68px}.ro label{font-family:inherit;font-size:12px;padding:9px 6px;border-radius:9px;color:var(--text-dim);border-color:#344764;min-height:40px;display:flex;align-items:center;justify-content:center}.ro input:checked+label{background:rgba(155,140,255,.18);border-color:var(--lav);color:#fff;box-shadow:0 0 0 1px rgba(155,140,255,.16)}
+.cbi{padding:10px;border-radius:9px}.cbi-text{font-size:13px;color:var(--text-dim)}.cbox{width:18px;height:18px;border-radius:5px}
+.btn{font-family:inherit;font-size:12px;font-weight:700;letter-spacing:.015em;border-radius:10px;padding:10px 15px;min-height:42px}.btn-row{gap:10px;margin-top:18px}
+.score-box{padding:20px;border-radius:12px}.score-big{font-size:clamp(38px,5vw,52px)}.interp-panel{padding:16px;border-radius:12px}.interp-hdr{font-size:12px}.ipt{font-size:13px;padding-top:5px;padding-bottom:5px}
+.study-link{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:18px;padding-top:13px;border-top:1px solid rgba(145,163,191,.18);font-size:11px}.study-link>span{font-size:9px;font-weight:800;letter-spacing:.09em;color:var(--text-muted)}.study-link a{color:#bcb2ff;text-decoration:none;font-weight:650;overflow-wrap:anywhere}.study-link a:hover{text-decoration:underline;color:#fff}
+input,textarea,select{font:inherit}button,a,input,label{touch-action:manipulation}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #bcb2ff;outline-offset:3px}
+#ronin-language-notice{font-size:13px!important;line-height:1.5!important;padding:12px 16px!important;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+@media(max-width:650px){.hdr{flex-wrap:wrap;gap:8px}.status-dots{margin-left:auto}#session-clock{display:none}.hdr-btn{font-size:11px;padding:7px 9px}.tab-nav{margin-left:-2px;margin-right:-2px;gap:2px}.tab-btn{padding:10px 11px;font-size:11px}.card{padding:16px;border-radius:13px}.rg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.ro{min-width:0}.ro label{min-height:44px}.btn-row{display:grid;grid-template-columns:1fr 1fr}.btn-row .btn{justify-content:center;padding:10px 8px}.study-link{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
 </head>
 <body>
 
@@ -1032,6 +1055,7 @@ footer{
           <button class="btn btn-ghost" onclick="App.scales.reset('phq9')">↺ RESET</button>
         </div>
         <div id="phq9-result" style="display:none" aria-live="polite"></div>
+        <div class="study-link"><span>FUENTE CIENTÍFICA</span><a href="https://doi.org/10.1046/j.1525-1497.2001.016009606.x" target="_blank" rel="noopener noreferrer">Kroenke et al. (2001) · estudio original del PHQ-9 · DOI ↗</a></div>
       </div>
 
       <!-- GAD-7 -->
@@ -1048,6 +1072,7 @@ footer{
           <button class="btn btn-ghost" onclick="App.scales.reset('gad7')">↺ RESET</button>
         </div>
         <div id="gad7-result" style="display:none" aria-live="polite"></div>
+        <div class="study-link"><span>FUENTE CIENTÍFICA</span><a href="https://doi.org/10.1001/archinte.166.10.1092" target="_blank" rel="noopener noreferrer">Spitzer et al. (2006) · estudio original del GAD-7 · DOI ↗</a></div>
       </div>
     </div>
 
@@ -1077,6 +1102,7 @@ footer{
         <button class="btn btn-ghost" onclick="App.scales.reset('mdq')">↺ RESET</button>
       </div>
       <div id="mdq-result" style="display:none" aria-live="polite"></div>
+        <div class="study-link"><span>FUENTE CIENTÍFICA</span><a href="https://doi.org/10.1001/archpsyc.57.11.1053" target="_blank" rel="noopener noreferrer">Hirschfeld et al. (2000) · estudio original del MDQ · DOI ↗</a></div>
     </div>
 
     <!-- Y-BOCS + ASRS -->
@@ -1096,6 +1122,7 @@ footer{
           <button class="btn btn-ghost" onclick="App.scales.reset('ybocs')">↺ RESET</button>
         </div>
         <div id="ybocs-result" style="display:none" aria-live="polite"></div>
+        <div class="study-link"><span>FUENTE CIENTÍFICA</span><a href="https://doi.org/10.1001/archpsyc.1989.01810110048007" target="_blank" rel="noopener noreferrer">Goodman et al. (1989) · desarrollo y fiabilidad de la Y-BOCS · DOI ↗</a></div>
       </div>
 
       <!-- ASRS -->
@@ -1112,6 +1139,7 @@ footer{
           <button class="btn btn-ghost" onclick="App.scales.reset('asrs')">↺ RESET</button>
         </div>
         <div id="asrs-result" style="display:none" aria-live="polite"></div>
+        <div class="study-link"><span>FUENTE CIENTÍFICA</span><a href="https://doi.org/10.1017/S0033291704002892" target="_blank" rel="noopener noreferrer">Kessler et al. (2005) · estudio original de la ASRS · DOI ↗</a></div>
       </div>
     </div>
 
@@ -1125,6 +1153,7 @@ footer{
         <button class="btn btn-ghost" onclick="App.scales.reset('audit')">↺ RESET</button>
       </div>
       <div id="audit-result" style="display:none" aria-live="polite"></div>
+        <div class="study-link"><span>FUENTE CIENTÍFICA</span><a href="https://doi.org/10.1111/j.1360-0443.1993.tb02093.x" target="_blank" rel="noopener noreferrer">Saunders et al. (1993) · desarrollo del AUDIT · DOI ↗</a></div>
     </div>
 
     <!-- IDQ -->
@@ -1140,6 +1169,7 @@ footer{
         <button class="btn btn-ghost" onclick="App.scales.reset('idq')">↺ RESET</button>
       </div>
       <div id="idq-result" style="display:none" aria-live="polite"></div>
+        <div class="study-link"><span>FUENTE CIENTÍFICA</span><a href="https://doi.org/10.1002/jclp.23446" target="_blank" rel="noopener noreferrer">Shevlin et al. (2023) · desarrollo y validación inicial del IDQ · DOI ↗</a></div>
     </div>
 
   </div><!-- /tab-screening -->
