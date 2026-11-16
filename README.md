@@ -1,6 +1,8 @@
 # RONIN Mental Android
 **English summary:** RONIN Mental Android is a Spanish-language Android WebView wrapper for the PSYCHIATRIC-SCANNER Ω · RONIN MENTAL v2.0 web tool. It packages the locally hosted interface as a debug APK; it is informational software, not a clinically validated medical device or a substitute for professional assessment.
 
+**License status:** No top-level `LICENSE` file is currently published in this repository. Do not assume that the code or documents are available for reuse or redistribution; licensing terms need to be stated explicitly by the maintainer.
+
 
 Aplicación Android que empaqueta la herramienta web original **PSYCHIATRIC-SCANNER Ω · RONIN MENTAL v2.0** en un WebView local.
 
